@@ -83,6 +83,39 @@ class Vehicle {
             console.log("Unknown type of vehicle");
         }
     }
+
+}
+
+class Car extends Vehicle {
+    constructor(make, model, year, color, mileage) {
+        super(make, model, year, color, mileage)
+        this.maxPassengers = 5
+        this.currentPassengers = 0
+        this.numberOfWheels = 4
+        this.maxSpeed = 160
+        this.fule = 10
+        this.scheduleService = false
+        
+    }
+
+    loadPassenger() {
+        if (this.currentCapacity < this.maxCapacity) {
+          this.currentCapacity++;
+        }
+        else (
+            console.log('There is no more room')
+        )
+}
+
+scheduleService() {
+    if (this.mileage >= 30000) {
+      console.log(true)
+    }
+    else (
+        console.log(false)
+    )
+}
+
 }
 
 //This exports things you want to use from this "module", more info in readme
